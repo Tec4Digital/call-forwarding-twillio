@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+mangum
+twilio
+python-multipart==0.0.20
+pydantic==2.10.6

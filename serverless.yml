@@ -1,0 +1,14 @@
+service: fastapi-twilio
+
+provider:
+  name: aws
+  runtime: python3.9
+  region: ap-south-1
+  environment:
+    HOSTED_DOMAIN: ${env:HOSTED_DOMAIN}
+
+functions:
+  app:
+    handler: app.main.handler
+    events:
+      - httpApi: '*'
