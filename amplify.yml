@@ -1,0 +1,17 @@
+version: 1
+backend:
+  phases:
+    preBuild:
+      commands:
+        - npm install -g serverless
+        - pip install -r requirements.txt -t .
+    build:
+      commands:
+        - serverless deploy
+  artifacts:
+    baseDirectory: .
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
