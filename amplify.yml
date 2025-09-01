@@ -18,7 +18,7 @@ backend:
   phases:
     preBuild:
       commands:
-        - npm install -g serverless
+        - npm install -g serverless@3 
         - pip install -r requirements.txt -t .
     build:
       commands:
