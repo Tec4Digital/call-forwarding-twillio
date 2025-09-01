@@ -1,4 +1,19 @@
 version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - echo "No frontend build needed"
+    build:
+      commands:
+        - echo "Skipping frontend build"
+  artifacts:
+    baseDirectory: .
+    files:
+      - index.html
+  cache:
+    paths: []
+
 backend:
   phases:
     preBuild:
